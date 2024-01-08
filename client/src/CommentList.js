@@ -23,11 +23,11 @@ const CommentList = ({ comments }) => {
     }
 
     if (comment.status === "pending") {
-      content = "This commnet is awaiting moderation";
+      content = "This comment is awaiting moderation";
     }
 
     if (comment.status === "rejected") {
-      content = "This commnet has been rejected";
+      content = "This comment has been rejected";
     }
     return <li key={comment.id}>{content}</li>;
   });
