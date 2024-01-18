@@ -6,8 +6,8 @@ at kubectl config dir
 kubectl apply -f [configfile_name]
 ```
 
-## Restart deployment with current deployment config
+## Restart deployment
 
 ```bash
-kubectl rollout restart deplooyment [depl_name]
+kubectl rollout restart deployment [depl_name]
 ```
