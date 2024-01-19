@@ -1,4 +1,4 @@
-## Create deployment
+## Apply kubect config
 
 at kubectl config dir
 
@@ -10,4 +10,11 @@ kubectl apply -f [configfile_name]
 
 ```bash
 kubectl rollout restart deployment [depl_name]
+```
+
+## Start skaffold
+
+```bash
+# on root dir
+skaffold dev
 ```
