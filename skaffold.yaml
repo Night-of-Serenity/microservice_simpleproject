@@ -1,6 +1,13 @@
 apiVersion: skaffold/v4beta9
 kind: Config
+manifests:
+  rawYaml:
+    - ./infra/k8s/*
+deploy:
+  kubectl: {}
 build:
+  local:
+    push: false
   artifacts:
     - image: nightofserenity/client
       context: client
@@ -50,13 +57,6 @@ build:
             dest: .
       docker:
         dockerfile: Dockerfile
-  local:
-    push: false
-manifests:
-  rawYaml:
-    - ./infra/k8s/*
-deploy:
-  kubectl: {}
 # old version
 # apiVersion: skaffold/v2alpha3
 # kind: Config
